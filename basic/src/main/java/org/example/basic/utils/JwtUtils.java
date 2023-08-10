@@ -17,7 +17,7 @@ public class JwtUtils {
     private static final long EXPIRE_TIME = 30 * 60 * 1000;  // 30min
     private static final String JWT_TOKEN_SECRET_KEY = "douyin-simple";
 
-    public static String createJwtTokenByUser(int userId) {
+    public static String createJwtTokenByUser(long userId) {
         String secret = JWT_TOKEN_SECRET_KEY;
 
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
