@@ -1,5 +1,11 @@
+
+
 spring:
+  application:
+    name: tiktok-gateway
   cloud:
+    nacos:
+      server-addr: www.captainx.fun:8848
     gateway:
       routes:
         - id: socialize_route
@@ -22,3 +28,5 @@ spring:
             - Path=/douyin/publish/**,/douyin/user/**,/douyin/feed
           filters:
             - RewritePath=/douyin/(?<segment>.*), /$\{segment}
+server:
+  port: 10010
