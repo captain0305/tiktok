@@ -5,7 +5,11 @@ package org.example.basic.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Setter;
+import org.example.basic.entity.Video;
 
+/**
+ * 8个参数 Video实体类也是8个参数 dto删去了创建时间 增加了是否点赞的 boolean值
+ */
 
 @Data
 public class VideoDto {
@@ -51,4 +55,17 @@ public class VideoDto {
 
     @Setter(onMethod_ = {@JsonProperty("is_favorite")})
     private boolean isFavorite;
+
+    public VideoDto(){}
+
+    public VideoDto(Video video){
+
+        this.commentCount= video.getCommentCount();
+        this.coverUrl= video.getCoverUrl();
+        this.favoriteCount=video.getFavoriteCount();
+        this.playUrl= video.getPlayUrl();
+        this.videoId=video.getVideoId();
+        this.title=video.getTitle();
+
+    }
 }

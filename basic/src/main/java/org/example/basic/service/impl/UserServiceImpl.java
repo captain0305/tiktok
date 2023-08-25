@@ -3,6 +3,7 @@ package org.example.basic.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.example.basic.dto.UserDto;
 import org.example.basic.entity.User;
 import org.example.basic.service.UserService;
 import org.example.basic.mapper.UserMapper;
@@ -43,6 +44,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //初始化部分数据
         userEntity.setFollowCount(0);
         userEntity.setFollowerCount(0);
+        userEntity.setTotalFavorited(0);
+        userEntity.setWorkCount(0);
+        userEntity.setFavoriteCount(0);
+
 
         baseMapper.insert(userEntity);
         return userEntity;
@@ -71,6 +76,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //密码错误返回null
         return null;
     }
+
+    @Override
+    public UserDto getUserById(int userId, int followId) {
+        User user = this.getById(userId);
+        UserDto userDto=new UserDto();
+        // 当前id对应的user存在
+        if (user != null) {
+           // boolean isFollow=socializeFeignService.isFollow(userId, followId);
+            userDto = new UserDto(user);
+            userDto.setFollow(true);
+
+        }
+        return userDto;
+    }
+
+
 
 }
 

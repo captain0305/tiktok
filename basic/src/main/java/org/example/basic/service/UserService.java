@@ -1,6 +1,7 @@
 package org.example.basic.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.example.basic.dto.UserDto;
 import org.example.basic.entity.User;
 
 /**
@@ -12,4 +13,8 @@ public interface UserService extends IService<User> {
     User Register(String username, String password);
 
     User Login(String username, String password);
+
+    UserDto getUserById(int userId, int followId);
+
+
 }

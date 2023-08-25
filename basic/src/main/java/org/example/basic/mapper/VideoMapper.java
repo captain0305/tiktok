@@ -1,5 +1,6 @@
 package org.example.basic.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.example.basic.entity.Video;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -9,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2023-08-10 19:15:16
 * @Entity org.example.basic.entity.Video
 */
+@Mapper
 public interface VideoMapper extends BaseMapper<Video> {
 
 }

@@ -29,4 +29,4 @@ spring:
           filters:
             - RewritePath=/douyin/(?<segment>.*), /$\{segment}
 server:
-  port: 10010
+  port: 88

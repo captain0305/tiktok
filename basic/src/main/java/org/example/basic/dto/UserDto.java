@@ -3,6 +3,7 @@ package org.example.basic.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Setter;
+import org.example.basic.entity.User;
 
 @Data
 public class UserDto {
@@ -64,5 +65,20 @@ public class UserDto {
      */
     @Setter(onMethod_ = {@JsonProperty("favorite_count")})
     private Integer favoriteCount;
+
+
+    public UserDto(User user){
+        this.userId=user.getUserId();
+        this.favoriteCount= user.getFavoriteCount();
+        this.avatar= user.getAvatar();
+        this.followerCount=user.getFollowerCount();
+        this.backgroudImage= user.getBackgroudImage();
+        this.followCount=user.getFollowCount();
+        this.name=user.getName();
+        this.sinature= user.getSinature();
+        this.workCount=user.getWorkCount();
+        this.totalFavorited= user.getTotalFavorited();
+    }
+    public UserDto(){}
 
 }

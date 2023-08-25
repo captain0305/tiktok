@@ -3,6 +3,7 @@ package org.example.basic.vo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Setter;
+import org.example.basic.utils.ServiceEnum;
 import org.example.basic.utils.StatusEnum;
 
 
@@ -31,17 +32,29 @@ public class UserVo {
     @Setter(onMethod_ = {@JsonProperty("user_id")})
     private long userid;
 
-    public static UserVo success() {
+    public static UserVo success(String type) {
         UserVo userVo = new UserVo();
-        userVo.setStatusCode(StatusEnum.REGIST_SUCCESS.getCode());
-        userVo.setStatusMsg(StatusEnum.REGIST_SUCCESS.getMsg());
+        if (type==ServiceEnum.REGISTER.getType()){
+            userVo.setStatusCode(StatusEnum.REGIST_SUCCESS.getCode());
+            userVo.setStatusMsg(StatusEnum.REGIST_SUCCESS.getMsg());
+        } else if (type==ServiceEnum.LOGIN.getType()) {
+            userVo.setStatusCode(StatusEnum.LOGIN_SUCCESS.getCode());
+            userVo.setStatusMsg(StatusEnum.LOGIN_SUCCESS.getMsg());
+        }
+
         return userVo;
     }
 
-    public static UserVo fail() {
+    public static UserVo fail(String type) {
         UserVo userVo = new UserVo();
-        userVo.setStatusCode(StatusEnum.REGIST_FAIL.getCode());
-        userVo.setStatusMsg(StatusEnum.REGIST_FAIL.getMsg());
+        if (type== ServiceEnum.LOGIN.getType()){
+            userVo.setStatusCode(StatusEnum.LOGIN_FAIL.getCode());
+            userVo.setStatusMsg(StatusEnum.LOGIN_FAIL.getMsg());
+        } else if (type== ServiceEnum.REGISTER.getType()) {
+            userVo.setStatusCode(StatusEnum.REGIST_FAIL.getCode());
+            userVo.setStatusMsg(StatusEnum.REGIST_FAIL.getMsg());
+        }
+
         return userVo;
     }
 }
