@@ -6,6 +6,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient("douyin-socialize")
 public interface SocializeFeignService {
+
+    /**
+     * userId是被关注者
+     * followId是关注着
+     * @param userId
+     * @param followId
+     * @return
+     */
     @GetMapping("/relation/follow/isFollow")
     Boolean isFollow(@RequestParam("userId") Long userId, @RequestParam("followId") Long followId);
 }

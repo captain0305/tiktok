@@ -14,7 +14,7 @@ public interface UserService extends IService<User> {
 
     User Login(String username, String password);
 
-    UserDto getUserById(int userId, int followId);
+    UserDto getUserById(long userId, long followId);
 
 
 }

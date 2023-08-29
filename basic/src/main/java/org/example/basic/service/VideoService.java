@@ -1,6 +1,7 @@
 package org.example.basic.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.example.basic.dto.UserDto;
 import org.example.basic.dto.VideoDto;
 import org.example.basic.entity.User;
 import org.example.basic.entity.Video;
@@ -35,6 +36,11 @@ public interface VideoService extends IService<Video> {
      */
     String fetchFrameToFile(String videoFile, String targetFile);
 
+    VideoDto[] getVideoListByVideoIds(List<Integer> videoIds, long id) throws Exception;
+
+
     void saveVideoMsg(long userId, String videoPath, String coverPath, String title);
+
+    UserDto getUserByVideoId(long videoId,long userId);
 
 }

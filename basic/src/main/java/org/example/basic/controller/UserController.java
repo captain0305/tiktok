@@ -70,11 +70,6 @@ public class UserController {
         }
     }
 
-    @GetMapping("/getUserById")
-    public UserDto getUserById(@RequestParam("user_id") int userId, @RequestParam("follow_id") int followId) {
-        UserDto user = userService.getUserById(userId, followId);
-        return user;
-    }
 
     /**
      * 所有作品获赞数量统计
@@ -172,5 +167,24 @@ public class UserController {
         return FeignVo.success();
 
     }
+
+    @auth
+    @GetMapping("/getUserById")
+    public UserInfoVo getUserDtoById(@RequestParam("user_id")long userId,@RequestParam("token")String token){
+        int followerId = JwtUtils.getUserId(token);
+        UserDto userDto = userService.getUserById(userId,followerId);
+        if (userDto.getUserId()==null){
+            UserInfoVo fail = UserInfoVo.fail();
+            fail.setStatusMsg("没有对应的user");
+
+            return fail;
+        }
+        UserInfoVo success = UserInfoVo.success();
+        success.setUserDto(userDto);
+        return success;
+
+    }
+
+
 
 }

@@ -19,6 +19,8 @@ public class FeignVo {
     @Setter(onMethod_ = {@JsonProperty("status_msg")})
     private String statusMsg;
 
+
+
     public static FeignVo success() {
         FeignVo feignVo = new FeignVo();
         feignVo.setStatusCode(StatusEnum.FEIGN_SUCCESS.getCode());

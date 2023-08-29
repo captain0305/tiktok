@@ -104,14 +104,9 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
             int finalI = i;
             // 放入线程池中运行
             CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
-                videoList[finalI] = new VideoDto();
-                videoList[finalI].setVideoId(videos.get(finalI).getVideoId());
-                videoList[finalI].setAuthor(author);
-                videoList[finalI].setPlayUrl(videos.get(finalI).getPlayUrl());
-                videoList[finalI].setCoverUrl(videos.get(finalI).getCoverUrl());
+                videoList[finalI] = new VideoDto(videos.get(finalI));
 
-                videoList[finalI].setFavoriteCount(videos.get(finalI).getFavoriteCount());
-                videoList[finalI].setCommentCount(videos.get(finalI).getCommentCount());
+                videoList[finalI].setAuthor(author);
                 //TODO isfoloow
 //                boolean favorite = interactFeignService.isFavorite(user.getUserId(), videos.get(finalI).getVideoId());
 
@@ -173,6 +168,54 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
         }
     }
 
+    /**
+     * 对于传来的参数值video id不在表中的会出空指针异常还未处理
+     * @param videoIds
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public VideoDto[] getVideoListByVideoIds(List<Integer> videoIds, long id) throws Exception {
+        VideoDto[] videoList = new VideoDto[videoIds.size()];
+
+        List<CompletableFuture> futureList = new ArrayList<>();
+        for (int i=0; i < videoIds.size(); i++) {
+            int finalI = i;
+            // 放入线程池中运行
+            CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+                // 通过videoId查询视频基础信息
+                int videoId = videoIds.get(finalI);
+                Video videoEntity = this.getById(videoId);
+
+                // 查询视频作者信息
+                long userId = videoEntity.getAuthorId();
+                User user = userService.getById(userId);
+
+                // 封装数据
+                UserDto author = new UserDto(user);
+                //todo isfollow
+               // boolean isFollow=socializeFeignService.isFollow(userId, id);
+                author.setFollow(true);
+
+                VideoDto video = new VideoDto(videoEntity);
+                video.setAuthor(author);
+                //TODO isfoloow
+                //boolean favorite = interactFeignService.isFavorite(user.getUserId(), video.getVideoId());
+
+                video.setFavorite(true);
+
+
+                videoList[finalI] = video;
+            }, ThreadPool.executor);
+            futureList.add(future);
+        }
+
+        // 阻塞主线程等待，避免主线程提前返回结果，导致数据错误
+        CompletableFuture.allOf(futureList.toArray(new CompletableFuture[futureList.size()])).get();
+        return videoList;
+    }
+
     // 失效模式，投稿发布更新数据库后删除“当前用户发布的视频列表”缓存数据
     @CacheEvict(value = "video", key = "#userId")
     @Override
@@ -193,6 +236,23 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
         Date date = new Date(System.currentTimeMillis());
         video.setCreatedTime(date);
         save(video);
+
+    }
+
+    @Override
+    public UserDto getUserByVideoId(long videoId,long userId) {
+        Video video = this.getById(videoId);
+        if (video==null){
+            return null;
+        }
+        Long authorId = video.getAuthorId();
+        User user = userService.getById(authorId);
+        //todo feign
+        //Boolean follow = socializeFeignService.isFollow(user.getUserId(), userId);
+        UserDto userDto = new UserDto(user);
+        userDto.setFollow(true);
+        return userDto;
+
 
     }
 

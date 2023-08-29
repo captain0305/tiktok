@@ -78,11 +78,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
     @Override
-    public UserDto getUserById(int userId, int followId) {
+    public UserDto getUserById(long userId, long followId) {
         User user = this.getById(userId);
         UserDto userDto=new UserDto();
         // 当前id对应的user存在
         if (user != null) {
+            //todo isfolloe
            // boolean isFollow=socializeFeignService.isFollow(userId, followId);
             userDto = new UserDto(user);
             userDto.setFollow(true);
