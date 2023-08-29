@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.basic.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.basic.entity.User">
+            <id property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="backgroudImage" column="backgroud_image" jdbcType="VARCHAR"/>
+            <result property="sinature" column="sinature" jdbcType="VARCHAR"/>
+            <result property="followCount" column="follow_count" jdbcType="INTEGER"/>
+            <result property="followerCount" column="follower_count" jdbcType="INTEGER"/>
+            <result property="totalFavorited" column="total_favorited" jdbcType="INTEGER"/>
+            <result property="workCount" column="work_count" jdbcType="INTEGER"/>
+            <result property="favoriteCount" column="favorite_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,name,password,
+        avatar,backgroud_image,sinature,
+        follow_count,follower_count,total_favorited,
+        work_count,favorite_count
+    </sql>
+</mapper>

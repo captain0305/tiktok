@@ -25,8 +25,8 @@ spring:
         - id: socialize_route
           uri: lb://douyin-basic
           predicates:
-            - Path=/douyin/publish/**,/douyin/user/**,/douyin/feed
+            - Path=/douyin/publish/**,/douyin/user/**,/douyin/feed,/douyin/video/**
           filters:
             - RewritePath=/douyin/(?<segment>.*), /$\{segment}
 server:
-  port: 10010
+  port: 88

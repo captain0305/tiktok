@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="captainx">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>5.7.25</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <Current>1</Current>
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="3" parent="1" name="mysql">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="4" parent="1" name="nacos_config">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="5" parent="1" name="performance_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="6" parent="1" name="sys">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="7" parent="1" name="tiktok">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <table id="8" parent="2" name="CHARACTER_SETS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="9" parent="2" name="COLLATIONS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="10" parent="2" name="COLLATION_CHARACTER_SET_APPLICABILITY">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="11" parent="2" name="COLUMNS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="12" parent="2" name="COLUMN_PRIVILEGES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="13" parent="2" name="ENGINES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="14" parent="2" name="EVENTS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="15" parent="2" name="FILES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="16" parent="2" name="GLOBAL_STATUS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="17" parent="2" name="GLOBAL_VARIABLES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="18" parent="2" name="INNODB_BUFFER_PAGE">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="19" parent="2" name="INNODB_BUFFER_PAGE_LRU">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="20" parent="2" name="INNODB_BUFFER_POOL_STATS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="21" parent="2" name="INNODB_CMP">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="22" parent="2" name="INNODB_CMPMEM">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="23" parent="2" name="INNODB_CMPMEM_RESET">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="24" parent="2" name="INNODB_CMP_PER_INDEX">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="25" parent="2" name="INNODB_CMP_PER_INDEX_RESET">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="26" parent="2" name="INNODB_CMP_RESET">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="27" parent="2" name="INNODB_FT_BEING_DELETED">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="28" parent="2" name="INNODB_FT_CONFIG">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="29" parent="2" name="INNODB_FT_DEFAULT_STOPWORD">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="30" parent="2" name="INNODB_FT_DELETED">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="31" parent="2" name="INNODB_FT_INDEX_CACHE">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="32" parent="2" name="INNODB_FT_INDEX_TABLE">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="33" parent="2" name="INNODB_LOCKS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="34" parent="2" name="INNODB_LOCK_WAITS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="35" parent="2" name="INNODB_METRICS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="36" parent="2" name="INNODB_SYS_COLUMNS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="37" parent="2" name="INNODB_SYS_DATAFILES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="38" parent="2" name="INNODB_SYS_FIELDS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="39" parent="2" name="INNODB_SYS_FOREIGN">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="40" parent="2" name="INNODB_SYS_FOREIGN_COLS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="41" parent="2" name="INNODB_SYS_INDEXES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="42" parent="2" name="INNODB_SYS_TABLES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="43" parent="2" name="INNODB_SYS_TABLESPACES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="44" parent="2" name="INNODB_SYS_TABLESTATS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="45" parent="2" name="INNODB_SYS_VIRTUAL">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="46" parent="2" name="INNODB_TEMP_TABLE_INFO">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="47" parent="2" name="INNODB_TRX">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="48" parent="2" name="KEY_COLUMN_USAGE">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="49" parent="2" name="OPTIMIZER_TRACE">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="50" parent="2" name="PARAMETERS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="51" parent="2" name="PARTITIONS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="52" parent="2" name="PLUGINS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="53" parent="2" name="PROCESSLIST">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="54" parent="2" name="PROFILING">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="55" parent="2" name="REFERENTIAL_CONSTRAINTS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="56" parent="2" name="ROUTINES">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="57" parent="2" name="SCHEMATA">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="58" parent="2" name="SCHEMA_PRIVILEGES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="59" parent="2" name="SESSION_STATUS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="60" parent="2" name="SESSION_VARIABLES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="61" parent="2" name="STATISTICS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="62" parent="2" name="TABLES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="63" parent="2" name="TABLESPACES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="64" parent="2" name="TABLE_CONSTRAINTS">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="65" parent="2" name="TABLE_PRIVILEGES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="66" parent="2" name="TRIGGERS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="67" parent="2" name="USER_PRIVILEGES">
+      <Engine>MEMORY</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="68" parent="2" name="VIEWS">
+      <Engine>InnoDB</Engine>
+      <System>1</System>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="69" parent="7" name="comment">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="70" parent="7" name="favor">
+      <Comment>点赞关系表</Comment>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="71" parent="7" name="follow">
+      <Comment>关注表</Comment>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="72" parent="7" name="friend">
+      <Comment>好友表双向两份数据</Comment>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="73" parent="7" name="message">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="74" parent="7" name="user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="75" parent="7" name="video">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="76" parent="69" name="id">
+      <Comment>评论id Mybatis plus自动生成</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="77" parent="69" name="video_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="78" parent="69" name="author_id">
+      <Comment>评论者id</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="79" parent="69" name="content">
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="80" parent="69" name="created_time">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="81" parent="69" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="69" name="video_id">
+      <ColNames>video_id</ColNames>
+      <Comment>用于统计favorite count和实现评论列表操作</Comment>
+      <Type>btree</Type>
+    </index>
+    <index id="83" parent="69" name="author_id">
+      <ColNames>author_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="84" parent="69" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="85" parent="70" name="id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="86" parent="70" name="user_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="87" parent="70" name="video_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="88" parent="70" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="89" parent="70" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Comment>用于实现喜欢列表,和userDto喜欢的数量统计</Comment>
+      <Type>btree</Type>
+    </index>
+    <index id="90" parent="70" name="video_id">
+      <ColNames>video_id</ColNames>
+      <Comment>用于实现videoDto的favorite_count</Comment>
+      <Type>btree</Type>
+    </index>
+    <key id="91" parent="70" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="92" parent="71" name="id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="93" parent="71" name="user_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="94" parent="71" name="to_user_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="95" parent="71" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="96" parent="71" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Comment>查关注列表</Comment>
+      <Type>btree</Type>
+    </index>
+    <index id="97" parent="71" name="to_user_id">
+      <ColNames>to_user_id</ColNames>
+      <Comment>查粉丝列表</Comment>
+      <Type>btree</Type>
+    </index>
+    <key id="98" parent="71" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="99" parent="72" name="id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="100" parent="72" name="user_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="101" parent="72" name="friend_id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="102" parent="72" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="103" parent="72" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Comment>查询和删除用</Comment>
+      <Type>btree</Type>
+    </index>
+    <index id="104" parent="72" name="friend_id">
+      <ColNames>friend_id</ColNames>
+      <Comment>删除用</Comment>
+      <Type>btree</Type>
+    </index>
+    <key id="105" parent="72" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="106" parent="73" name="id">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="107" parent="73" name="to_user_id">
+      <Comment>发送者</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="108" parent="73" name="from_user_id">
+      <Comment>接受者</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="109" parent="73" name="content">
+      <Comment>消息内容</Comment>
+      <DasType>text|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="110" parent="73" name="create_time">
+      <Comment>发送时间</Comment>
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="111" parent="73" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="112" parent="73" name="multiIdx1">
+      <ColNames>from_user_id
+to_user_id</ColNames>
+      <Comment>用于查询记录两个索引设置防止联合索引索引失效</Comment>
+      <Type>btree</Type>
+    </index>
+    <index id="113" parent="73" name="create_time">
+      <ColNames>create_time</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="114" parent="73" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="115" parent="74" name="user_id">
+      <Comment>用户id Mybatis plus自动生成</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="116" parent="74" name="name">
+      <Comment>随用户注册上传</Comment>
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="117" parent="74" name="password">
+      <Comment>密码通过md5	加密后存储</Comment>
+      <DasType>varchar(32)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="118" parent="74" name="avatar">
+      <Comment>头像可以更换——默认为初始照片上传到服务器中</Comment>
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="119" parent="74" name="backgroud_image">
+      <Comment>背景图片可以更换——默认为初始照片上传到服务器中</Comment>
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="120" parent="74" name="sinature">
+      <Comment>个性签名--默认为空字符串可以更改</Comment>
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="121" parent="74" name="follow_count">
+      <Comment>关注总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="122" parent="74" name="follower_count">
+      <Comment>粉丝总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <column id="123" parent="74" name="total_favorited">
+      <Comment>获赞总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <column id="124" parent="74" name="work_count">
+      <Comment>作品总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="125" parent="74" name="favorite_count">
+      <Comment>获赞总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <index id="126" parent="74" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="127" parent="74" name="name">
+      <ColNames>name</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="74" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="129" parent="74" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="130" parent="75" name="video_id">
+      <Comment>视频id Mybatis plus自动生成</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="131" parent="75" name="author_id">
+      <Comment>作者id 创建时token携带</Comment>
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="132" parent="75" name="title">
+      <Comment>创建时携带</Comment>
+      <DasType>varchar(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="133" parent="75" name="play_url">
+      <Comment>视频地址——必须在创建时一同上传？这俩接口没给</Comment>
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="134" parent="75" name="cover_url">
+      <Comment>封面地址——必须在创建时一同上传？这俩接口没给请求路径</Comment>
+      <DasType>varchar(255)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="135" parent="75" name="favorite_count">
+      <Comment>获赞总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="136" parent="75" name="comment_count">
+      <Comment>评论总数</Comment>
+      <DasType>int(11)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="137" parent="75" name="created_time">
+      <DasType>datetime|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <index id="138" parent="75" name="PRIMARY">
+      <ColNames>video_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="139" parent="75" name="author_id">
+      <ColNames>author_id</ColNames>
+      <Comment>用户id用于实现发布列表统计userDto发布视频数量</Comment>
+      <Type>btree</Type>
+    </index>
+    <key id="140" parent="75" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
