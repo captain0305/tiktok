@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.example.basic.dto.UserDto;
 import org.example.basic.entity.User;
+import org.example.basic.feign.SocializeFeignService;
 import org.example.basic.service.UserService;
 import org.example.basic.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -19,6 +21,8 @@ import org.springframework.util.StringUtils;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService {
+    @Autowired
+    SocializeFeignService socializeFeignService;
 
     @Override
     public User Register(String username, String password) {
@@ -83,10 +87,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         UserDto userDto=new UserDto();
         // 当前id对应的user存在
         if (user != null) {
-            //todo isfolloe
-           // boolean isFollow=socializeFeignService.isFollow(userId, followId);
+            //todo isfolloe已经解决
+            boolean isFollow=socializeFeignService.isFollow(userId, followId);
             userDto = new UserDto(user);
-            userDto.setFollow(true);
+            userDto.setFollow(isFollow);
 
         }
         return userDto;

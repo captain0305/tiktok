@@ -15,5 +15,5 @@ public interface SocializeFeignService {
      * @return
      */
     @GetMapping("/relation/follow/isFollow")
-    Boolean isFollow(@RequestParam("userId") Long userId, @RequestParam("followId") Long followId);
+    Boolean isFollow(@RequestParam("user_id") Long userId, @RequestParam("follow_id") Long followId);
 }

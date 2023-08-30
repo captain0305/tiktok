@@ -19,6 +19,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    SocializeFeignService socializeFeignService;
+
     @PostMapping("/register")
     public UserVo userRegister(@RequestParam("username") String username, @RequestParam("password") String password) {
         User user = userService.Register(username, password);
@@ -51,16 +54,16 @@ public class UserController {
 
     @auth
     @GetMapping("/")
-    public UserInfoVo userInfo(@RequestParam("user_id") Integer userId, @RequestParam("token") String token) {
+    public UserInfoVo userInfo(@RequestParam("user_id") Long userId, @RequestParam("token") String token) {
 
         //通过userId获得对应用户数据
         User user = userService.getById(userId);
 
         if (user != null) {
             UserInfoVo success = UserInfoVo.success();
-            //boolean isFollow=SocializeFeignService.isFollow(userId, JwtUtils.getUserId(token));
+            boolean isFollow=socializeFeignService.isFollow((long)JwtUtils.getUserId(token),userId);
             UserDto userDto=new UserDto(user);
-            userDto.setFollow(true);
+            userDto.setFollow(isFollow);
             success.setUserDto(userDto);
 
 

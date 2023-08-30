@@ -63,7 +63,7 @@ public class VideoController {
 
     @auth
     @GetMapping("/videoList")
-    public PublishListVo videoList(@RequestParam("videoIds") List<Integer> videoIds, @RequestParam("id") int id,@RequestParam("token") String token){
+    public PublishListVo videoList(@RequestParam("videoIds") List<Long> videoIds, @RequestParam("id") Long id,@RequestParam("token") String token){
         VideoDto[] videoList = new VideoDto[0];
         try {
             videoList = videoService.getVideoListByVideoIds(videoIds, id);

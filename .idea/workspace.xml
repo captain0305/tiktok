@@ -4,40 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca2f50-7fcd-49e4-acef-602cc6b7287b" name="变更" comment="实现了除 feign的get查询之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配">
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/config/MyCacheConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/MessageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/RelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Follow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/feign/BasicFeignService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/mapper/FollowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/mapper/MessageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/FollowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/FollowServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/MessageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/StatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/ThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/aop/JwtAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/aop/auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/RelationVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/UserInfoVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/resources/mapper/FollowMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+    <list default="true" id="c5ca2f50-7fcd-49e4-acef-602cc6b7287b" name="变更" comment="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口">
+      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/KafkaFollowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/KafkaFollowServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/FeignVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/MessageVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/socialize/src/test/java/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/FeedController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/InteractFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/InteractFeignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/SocializeFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/SocializeFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/VideoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/vo/FeignVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/vo/FeignVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/RelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/RelationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/feign/BasicFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/feign/BasicFeignService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/FollowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/FollowService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/FollowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/FollowServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/StatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/StatusEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/socialize/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,8 +72,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -159,10 +152,10 @@
       <recent name="$PROJECT_DIR$/gateway/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.socialize.dto" />
+      <recent name="org.example.socialize.vo" />
       <recent name="org.example.socialize.config" />
       <recent name="org.example.socialize.util" />
-      <recent name="org.example.socialize.vo" />
-      <recent name="org.example.socialize.dto" />
       <recent name="org.example.socialize.feign" />
     </key>
   </component>
@@ -194,6 +187,16 @@
       <option name="PACKAGE_NAME" value="org.example.basic" />
       <option name="MAIN_CLASS_NAME" value="org.example.basic.UserControllerTest" />
       <option name="METHOD_NAME" value="testTimeStamps2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socialize" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="testDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -234,6 +237,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.test.testDate" />
         <item itemvalue="Spring Boot.basicSpringApplication" />
         <item itemvalue="Spring Boot.tiktokGatewayApplication" />
         <item itemvalue="JUnit.UserControllerTest.testTimeStamps2" />
@@ -255,7 +259,7 @@
       <workItem from="1691486197683" duration="10889000" />
       <workItem from="1691587352893" duration="27412000" />
       <workItem from="1692276414073" duration="45210000" />
-      <workItem from="1693152450800" duration="14119000" />
+      <workItem from="1693152450800" duration="47613000" />
     </task>
     <task id="LOCAL-00001" summary="正式第一版版本依赖正确使用父工程和子工程共同进行依赖管理">
       <created>1691474221217</created>
@@ -285,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692954571026</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口">
+      <created>1693279478406</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693279478406</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +318,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="basic" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -320,7 +343,8 @@
     <MESSAGE value="创建了vo dto 对video 和 user表结构进行部分修改&#10;写了用户的注册和登陆代码还未进行测试" />
     <MESSAGE value="实现了除 feign之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配" />
     <MESSAGE value="实现了除 feign的get查询之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了除 feign的get查询之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配" />
+    <MESSAGE value="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

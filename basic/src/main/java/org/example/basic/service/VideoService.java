@@ -36,7 +36,7 @@ public interface VideoService extends IService<Video> {
      */
     String fetchFrameToFile(String videoFile, String targetFile);
 
-    VideoDto[] getVideoListByVideoIds(List<Integer> videoIds, long id) throws Exception;
+    VideoDto[] getVideoListByVideoIds(List<Long> videoIds, long id) throws Exception;
 
 
     void saveVideoMsg(long userId, String videoPath, String coverPath, String title);

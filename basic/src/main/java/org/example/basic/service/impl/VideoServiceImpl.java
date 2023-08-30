@@ -89,10 +89,10 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
         List<Video> videos = this.searchVideosByUserId(user.getUserId());
 
         //填入作者信息
-        //TODO isfoloow
-        //boolean isfollow=socializeFeignService.isFollow(user.getUserId(), user.getUserId());
+        //TODO isfoloow已经解决
+        boolean isfollow=socializeFeignService.isFollow(user.getUserId(), user.getUserId());
         UserDto author = new UserDto(user);
-        author.setFollow(true);
+        author.setFollow(isfollow);
 
         //创建需要返回的video数组
         int size = videos.size();
@@ -107,10 +107,10 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
                 videoList[finalI] = new VideoDto(videos.get(finalI));
 
                 videoList[finalI].setAuthor(author);
-                //TODO isfoloow
-//                boolean favorite = interactFeignService.isFavorite(user.getUserId(), videos.get(finalI).getVideoId());
+                //TODO favorite已经解决
+               boolean favorite = interactFeignService.isFavorite(user.getUserId(), videos.get(finalI).getVideoId());
 
-                videoList[finalI].setFavorite(true);
+                videoList[finalI].setFavorite(favorite);
 
                 videoList[finalI].setTitle(videos.get(finalI).getTitle());
             }, ThreadPool.executor);
@@ -176,7 +176,7 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
      * @throws Exception
      */
     @Override
-    public VideoDto[] getVideoListByVideoIds(List<Integer> videoIds, long id) throws Exception {
+    public VideoDto[] getVideoListByVideoIds(List<Long> videoIds, long id) throws Exception {
         VideoDto[] videoList = new VideoDto[videoIds.size()];
 
         List<CompletableFuture> futureList = new ArrayList<>();
@@ -185,7 +185,7 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
             // 放入线程池中运行
             CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
                 // 通过videoId查询视频基础信息
-                int videoId = videoIds.get(finalI);
+                Long videoId = videoIds.get(finalI);
                 Video videoEntity = this.getById(videoId);
 
                 // 查询视频作者信息
@@ -194,16 +194,16 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
 
                 // 封装数据
                 UserDto author = new UserDto(user);
-                //todo isfollow
-               // boolean isFollow=socializeFeignService.isFollow(userId, id);
-                author.setFollow(true);
+                //todo isfollow好像有点问题
+                boolean isFollow=socializeFeignService.isFollow(id,userId );
+                author.setFollow(isFollow);
 
                 VideoDto video = new VideoDto(videoEntity);
                 video.setAuthor(author);
-                //TODO isfoloow
-                //boolean favorite = interactFeignService.isFavorite(user.getUserId(), video.getVideoId());
+                //TODO isfavorite已经解决
+                boolean favorite = interactFeignService.isFavorite(user.getUserId(), video.getVideoId());
 
-                video.setFavorite(true);
+                video.setFavorite(favorite);
 
 
                 videoList[finalI] = video;
@@ -247,10 +247,10 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video>
         }
         Long authorId = video.getAuthorId();
         User user = userService.getById(authorId);
-        //todo feign
-        //Boolean follow = socializeFeignService.isFollow(user.getUserId(), userId);
+        //todo isfollow已经解决
+        Boolean follow = socializeFeignService.isFollow(userId,user.getUserId());
         UserDto userDto = new UserDto(user);
-        userDto.setFollow(true);
+        userDto.setFollow(follow);
         return userDto;
 
 

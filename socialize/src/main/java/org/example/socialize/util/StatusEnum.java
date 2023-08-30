@@ -14,9 +14,13 @@ public  enum StatusEnum {
     GET_VIDEO_LIST_SUCCESS(0,"获取视频列表成功"),
     GET_VIDEO_LIST_FAIL(1,"获取视频列表失败"),
     FEIGN_SUCCESS(0,"操作成功"),
-    FEIGN_FAIL(0,"操作失败"),
+    FEIGN_FAIL(1,"操作失败"),
     FOLLOW_SUCCESS(0,"关注成功"),
-    FOLLOW_FAIL(1,"关注失败");
+    FOLLOW_FAIL(1,"关注失败"),
+    MESSAGE_SUCCESS(0,"发送消息成功"),
+    MESSAGE_FAIL(1,"发送消息失败");
+
+
     private int code;
     private String msg;
 

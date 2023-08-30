@@ -17,10 +17,27 @@ spring:
     type: redis
     redis:
       # 缓存空值，解决缓存穿透问题
-      cache-null-values: true
+      cache-null-values: false
       use-key-prefix: true
       # 设置缓存过期时间
       time-to-live: 3600000
+  kafka:
+    bootstrap-servers: www.captainx.fun:9092
+    producer: # 生产者
+      retries: 3 # 失败重试次数
+      batch-size: 16384 # 生产者发送消息的批量大小
+      buffer-memory: 33554432 # 生产者用于缓存待发送消息的缓冲区大小
+      acks: -1 # 制定要求分区副本收到确认的数量0表示不需要确认 1表示至少一个副本确认 -1表示需要所有副本确认
+      # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      transaction-id-prefix: tx-
+    consumer:
+      group-id: default-group # 消费组的id用于区分不同的消费者组
+      enable-auto-commit: true # 是否允许自动提交消费偏移量
+      auto-offset-reset: latest # 当没有初始偏移量或者当前偏移量不存在时，从哪个位置开始消费 latest表示最新的， earliest表示从最早的开始
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
