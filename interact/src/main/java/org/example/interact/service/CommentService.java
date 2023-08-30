@@ -21,9 +21,10 @@ public interface CommentService extends IService<CommentEntity> {
      * @param actionType 操作类型 1添加评论 2删除评论
      * @param commentText 评论内容
      * @param commentId 要删除的评论id
+     * @param token 用户token
      * @return 操作结果
      */
-    CommentDto postComment(long userId, long videoId, int actionType, String commentText, Long commentId);
+    CommentDto postComment(long userId, long videoId, int actionType, String commentText, Long commentId,String token);
     /**
      * 查询视频的评论列表
      * @param userId 用户id

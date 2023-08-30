@@ -1,10 +1,9 @@
 package org.example.interact.utils;
 
-/**
- * @author carey
- */
 public class StatusConstant {
-
+    /**
+     * 用户登陆注册返回对象状态吗以及状态描述
+     */
     public enum  StatusEnum{
         SUCCESS(0,"成功"),FAIL(1,"失败");
         private int code;

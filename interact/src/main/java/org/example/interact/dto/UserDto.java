@@ -3,15 +3,41 @@ package org.example.interact.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Setter;
+import org.example.interact.entity.User;
 
 /**
  * @author carey
  */
 @Data
 public class UserDto {
+    @Setter(onMethod_ = {@JsonProperty("id")})
+    private Long userId;
+
     /**
-     * 关注总数
+     * 随用户注册上传
      */
+    @Setter(onMethod_ = {@JsonProperty("name")})
+    private String name;
+
+
+    /**
+     * 头像可以更换——默认为初始照片上传到服务器中
+     */
+    @Setter(onMethod_ = {@JsonProperty("avatar")})
+    private String avatar;
+
+    /**
+     * 背景图片可以更换——默认为初始照片上传到服务器中
+     */
+    @Setter(onMethod_ = {@JsonProperty("background_image")})
+    private String backgroudImage;
+
+    /**
+     * 个性签名--默认为空字符串可以更改
+     */
+    @Setter(onMethod_ = {@JsonProperty("signature")})
+    private String sinature;
+
     @Setter(onMethod_ = {@JsonProperty("follow_count")})
     private long followCount;
     /**
@@ -19,10 +45,7 @@ public class UserDto {
      */
     @Setter(onMethod_ = {@JsonProperty("follower_count")})
     private long followerCount;
-    /**
-     * 用户id
-     */
-    private long id;
+
     /**
      * true-已关注，false-未关注
      */
@@ -31,5 +54,34 @@ public class UserDto {
     /**
      * 用户名称
      */
-    private String name;
+    @Setter(onMethod_ = {@JsonProperty("total_favorited")})
+    private Integer totalFavorited;
+
+    /**
+     * 作品总数
+     */
+    @Setter(onMethod_ = {@JsonProperty("work_count")})
+    private Integer workCount;
+
+    /**
+     * 获赞总数
+     */
+    @Setter(onMethod_ = {@JsonProperty("favorite_count")})
+    private Integer favoriteCount;
+
+
+    public UserDto(User user){
+        this.userId=user.getUserId();
+        this.favoriteCount= user.getFavoriteCount();
+        this.avatar= user.getAvatar();
+        this.followerCount=user.getFollowerCount();
+        this.backgroudImage= user.getBackgroudImage();
+        this.followCount=user.getFollowCount();
+        this.name=user.getName();
+        this.sinature= user.getSinature();
+        this.workCount=user.getWorkCount();
+        this.totalFavorited= user.getTotalFavorited();
+    }
+    public UserDto(){}
+
 }

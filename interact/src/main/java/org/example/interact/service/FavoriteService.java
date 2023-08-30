@@ -15,14 +15,15 @@ public interface FavoriteService extends IService<FavorEntity> {
      * @param actionType 操作类型 1点赞 2取消赞
      * @return 返回操作结果
      */
-    boolean action(long userId, Long videoId, Integer actionType);
+    boolean action(long userId, Long videoId, Integer actionType,String token);
     /**
      * 查询用户的点赞视频列表
      * @param userId 用户id
      * @param id 操作者id
+     * @param token 用户token
      * @return 返回用户的点赞视频列表
      */
-    VideoDto[] favoriteList(Long userId, Long id);
+    VideoDto[] favoriteList(Long userId, Long id,String token);
     /**
      * 查询视频的点赞数量
      * @param videoId 视频id

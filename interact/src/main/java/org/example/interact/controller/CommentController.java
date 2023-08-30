@@ -4,7 +4,7 @@ import org.example.interact.service.CommentService;
 import org.example.interact.utils.JwtUtils;
 import org.example.interact.dto.CommentDto;
 import org.example.interact.vo.CommentVo;
-import org.example.interact.utils.Result;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,12 +17,6 @@ public class CommentController {
 
     @Autowired
     private CommentService commentService;
-
-    @GetMapping("/hello")
-    public Result test(@RequestParam("username") String username){
-        System.out.println("hello "+username);
-        return Result.ok();
-    }
 
     @GetMapping("/count")
     public int commentCount(@RequestParam("videoId") Long videoId) {
@@ -43,7 +37,7 @@ public class CommentController {
         }
         long userId = JwtUtils.getUserId(token);
 
-        CommentDto comment = commentService.postComment(userId, videoId, actionType, commentText, commentId);
+        CommentDto comment = commentService.postComment(userId, videoId, actionType, commentText, commentId,token);
 
         if (comment == null) {
             return CommentVo.fail();

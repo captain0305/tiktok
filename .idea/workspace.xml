@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca2f50-7fcd-49e4-acef-602cc6b7287b" name="变更" comment="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口">
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/config/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/KafkaFollowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/KafkaFollowServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/FeignVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/vo/MessageVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/socialize/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/FeedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/FeedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/InteractFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/InteractFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/SocializeFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign/SocializeFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic/src/main/java/org/example/basic/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/RelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/controller/RelationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/feign/BasicFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/feign/BasicFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/FollowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/FollowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/FollowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/FollowServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/service/impl/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/StatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util/StatusEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socialize/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/socialize/src/main/resources/application.yml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +70,6 @@
         <option name="userSettingsFile" value="/usr/local/Maven/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2T4NQTHwYeErtJDuozbhHeKjVl5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -110,107 +78,6 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/xuchengrui/Documents/Apifox/tiktok/socialize/src/main/java/org/example/socialize/util",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.16863406",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "spring.configuration.checksum": "3c2e34785f9be8e8c86a2925f0d34d4a",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
-  }
-}]]></component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/socialize/src/main/java/org/example/socialize/util" />
-      <recent name="$PROJECT_DIR$/basic/src/main/java/org/example/basic/feign" />
-      <recent name="$PROJECT_DIR$/basic/src/main/resources" />
-      <recent name="$PROJECT_DIR$/gateway/src/main/resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.socialize.dto" />
-      <recent name="org.example.socialize.vo" />
-      <recent name="org.example.socialize.config" />
-      <recent name="org.example.socialize.util" />
-      <recent name="org.example.socialize.feign" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.socializeSpringApplicatioin">
-    <configuration name="UserControllerTest.testTimeStamps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="basic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.basic" />
-      <option name="MAIN_CLASS_NAME" value="org.example.basic.UserControllerTest" />
-      <option name="METHOD_NAME" value="testTimeStamps" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.testTimeStamps2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="basic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.basic" />
-      <option name="MAIN_CLASS_NAME" value="org.example.basic.UserControllerTest" />
-      <option name="METHOD_NAME" value="testTimeStamps2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test.testDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="socialize" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="testDate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="basicSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="basic" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.basic.basicSpringApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,21 +91,20 @@
     </configuration>
     <configuration name="tiktokGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.gateway.tiktokGatewayApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.gateway.tiktokGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.test.testDate" />
-        <item itemvalue="Spring Boot.basicSpringApplication" />
+
         <item itemvalue="Spring Boot.tiktokGatewayApplication" />
         <item itemvalue="JUnit.UserControllerTest.testTimeStamps2" />
         <item itemvalue="JUnit.UserControllerTest.testTimeStamps" />
@@ -257,9 +123,7 @@
       <workItem from="1690298849232" duration="4778000" />
       <workItem from="1691469607245" duration="6149000" />
       <workItem from="1691486197683" duration="10889000" />
-      <workItem from="1691587352893" duration="27412000" />
-      <workItem from="1692276414073" duration="45210000" />
-      <workItem from="1693152450800" duration="47613000" />
+
     </task>
     <task id="LOCAL-00001" summary="正式第一版版本依赖正确使用父工程和子工程共同进行依赖管理">
       <created>1691474221217</created>
