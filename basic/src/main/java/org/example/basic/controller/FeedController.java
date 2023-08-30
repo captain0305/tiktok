@@ -67,6 +67,7 @@ public class FeedController {
             fail.setStatusMsg("视频已经刷完了");
             return fail;
         }
+        long userId = (long)JwtUtils.getUserId(token);
 
         VideoDto[] videoDtos = new VideoDto[videoList.size()];
         List<CompletableFuture> futureList = new ArrayList<>();
@@ -80,17 +81,18 @@ public class FeedController {
 
                 User user = userService.getById(video.getAuthorId());
                 UserDto userDto = new UserDto(user);
-                //TODO isfollow
-                //boolean isFollow=socializeFeignService.isFollow(userId, video.getAuthorId());
-                userDto.setFollow(true);
+                //TODO 已经解决isfollow
+
+                boolean isFollow=socializeFeignService.isFollow(userId, video.getAuthorId());
+                userDto.setFollow(isFollow);
 
                 //查询视频信息
 
-                //boolean isFavorite = favoriteService.isFavorite(userId, video.getVideoId());
+                boolean isFavorite = favoriteService.isFavorite(userId, video.getVideoId());
                 VideoDto videoDto = new VideoDto(video);
                 videoDto.setAuthor(userDto);
-                //TODO favarated
-                videoDto.setFavorite(true);
+                //TODO 已经解决favorite
+                videoDto.setFavorite(isFavorite);
 
 
 

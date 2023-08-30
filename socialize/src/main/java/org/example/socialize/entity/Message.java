@@ -5,7 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.Setter;
 
 /**
  * 
@@ -23,11 +26,13 @@ public class Message implements Serializable {
     /**
      * 发送者
      */
+    //@Setter(onMethod_ = {@JsonProperty("to_user_id")})
     private Long toUserId;
 
     /**
      * 接受者
      */
+    //@Setter(onMethod_ = {@JsonProperty("from_user_id")})
     private Long fromUserId;
 
     /**
@@ -38,6 +43,7 @@ public class Message implements Serializable {
     /**
      * 发送时间
      */
+   // @Setter(onMethod_ = {@JsonProperty("create_time")})
     private Date createTime;
 
     @TableField(exist = false)
