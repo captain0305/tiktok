@@ -28,10 +28,11 @@ spring:
       retries: 3 # 失败重试次数
       batch-size: 16384
       buffer-memory: 33554432
-      acks: 1
+      acks: -1
       # 指定消息key和消息体的编解码方式
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      transaction-id-prefix: tx-
     consumer:
       group-id: default-group # 消费组
       enable-auto-commit: true

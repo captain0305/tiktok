@@ -3,7 +3,6 @@ package org.example.interact.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Setter;
-import org.example.interact.dto.UserDto;
 
 /**
  * @author carey

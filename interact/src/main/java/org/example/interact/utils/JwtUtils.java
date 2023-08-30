@@ -17,23 +17,19 @@ import java.util.Date;
 public class JwtUtils {
 
     //指定一个token过期时间（毫秒）
-    private static final long EXPIRE_TIME = 30 * 60 * 1000;
-    // 30min
-    private static final String JWT_TOKEN_SECRET_KEY = "tiktok";
+    private static final long EXPIRE_TIME = 30 * 60 * 1000;  // 30min
+    private static final String JWT_TOKEN_SECRET_KEY = "douyin-simple";
 
     public static String createJwtTokenByUser(long userId) {
         String secret = JWT_TOKEN_SECRET_KEY;
 
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
-        Algorithm algorithm = Algorithm.HMAC256(secret);
-        //使用密钥进行哈希
+        Algorithm algorithm = Algorithm.HMAC256(secret);    //使用密钥进行哈希
         // 附带username信息的token
         return JWT.create()
                 .withClaim("userId", userId)
-                .withExpiresAt(date)
-                //过期时间
-                .sign(algorithm);
-                //签名算法
+                .withExpiresAt(date)  //过期时间
+                .sign(algorithm);     //签名算法
     }
 
 
@@ -46,8 +42,7 @@ public class JwtUtils {
         //根据密钥生成JWT效验器
         Algorithm algorithm = Algorithm.HMAC256(JWT_TOKEN_SECRET_KEY);
         JWTVerifier verifier = JWT.require(algorithm)
-                .withClaim("userId", getUserId(token))
-                //从不加密的消息体中取出username
+                .withClaim("userId", getUserId(token))//从不加密的消息体中取出username
                 .build();
         try {
             DecodedJWT jwt = verifier.verify(token);
@@ -60,10 +55,10 @@ public class JwtUtils {
     /**
      * 在token中获取到username信息
      */
-    public static long getUserId(String token) {
+    public static int getUserId(String token) {
         try {
             DecodedJWT jwt = JWT.decode(token);
-            return jwt.getClaim("userId").asLong();
+            return jwt.getClaim("userId").asInt();
         } catch (JWTDecodeException e) {
             return 0;
         }
