@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca2f50-7fcd-49e4-acef-602cc6b7287b" name="变更" comment="interact模块第一次提交">
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/FeignCommentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/FeignFavorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/StatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/vo/FeignVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/vo/PublishListVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/vo/UserInfoVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/controller/FavoriteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/controller/FavoriteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/VideoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/dto/VideoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/feign/BasicFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/feign/BasicFeignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/interactSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/interactSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/FavoriteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/FavoriteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/CommentKafkaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/CommentKafkaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/FavoriteKafkaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/FavoriteKafkaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/FavoriteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/service/impl/FavoriteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/ResultCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/StatusConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/java/org/example/interact/utils/StatusConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interact/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/interact/src/main/resources/application.yml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,15 +44,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="f575b503-7425-4a65-8dc8-45c255a78b55" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,34 +78,6 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gateway/src/main/resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.interact.vo" />
-      <recent name="org.example.interact.utils" />
-      <recent name="org.example.interact.entity" />
-      <recent name="org.example.basic.utils" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.interactSpringApplication">
-    <configuration name="interactSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="interact" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.interact.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.interact.interactSpringApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,8 +104,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.interactSpringApplication" />
+
         <item itemvalue="Spring Boot.tiktokGatewayApplication" />
+        <item itemvalue="JUnit.UserControllerTest.testTimeStamps2" />
+        <item itemvalue="JUnit.UserControllerTest.testTimeStamps" />
       </list>
     </recent_temporary>
   </component>
@@ -169,8 +123,7 @@
       <workItem from="1690298849232" duration="4778000" />
       <workItem from="1691469607245" duration="6149000" />
       <workItem from="1691486197683" duration="10889000" />
-      <workItem from="1691587352893" duration="641000" />
-      <workItem from="1693376309333" duration="7299000" />
+
     </task>
     <task id="LOCAL-00001" summary="正式第一版版本依赖正确使用父工程和子工程共同进行依赖管理">
       <created>1691474221217</created>
@@ -179,26 +132,93 @@
       <option name="project" value="LOCAL" />
       <updated>1691474221217</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v2 在几个服务和父项目中添加了一些依赖">
+      <created>1691649269192</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691649269192</updated>
+    </task>
+    <task id="LOCAL-00003" summary="创建了vo dto 对video 和 user表结构进行部分修改&#10;写了用户的注册和登陆代码还未进行测试">
+      <created>1691669779538</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691669779538</updated>
+    </task>
+    <task id="LOCAL-00004" summary="实现了除 feign的get查询之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配">
+      <created>1692954571026</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692954571026</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口">
+      <created>1693279478406</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693279478406</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="basic" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="正式第一版版本依赖正确使用父工程和子工程共同进行依赖管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="正式第一版版本依赖正确使用父工程和子工程共同进行依赖管理" />
+    <MESSAGE value="v2 在几个服务和父项目中添加了一些依赖" />
+    <MESSAGE value="创建了vo dto 对video 和 user表结构进行部分修改&#10;写了用户的注册和登陆代码还未进行测试" />
+    <MESSAGE value="实现了除 feign之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配" />
+    <MESSAGE value="实现了除 feign的get查询之外所有的basic模块的接口&#10;并实现了aop进行jwt权限认证并使用反射对不同的vo进行自适应适配" />
+    <MESSAGE value="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成basic所有的接口 但feign调用未测试 todo待完成&#10;socialize实现post接口" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

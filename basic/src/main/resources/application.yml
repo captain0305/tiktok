@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://www.captainx.fun:3306/tiktok?useSSL=false
+    username: root
+    password: my-secret-pw
+  cloud:
+    nacos:
+      discovery:
+        server-addr: www.captainx.fun:8848
+    alicloud:
+        access-key: LTAI5tNBAFYR3XYPyNTAz5Pf
+        secret-key: kcDuyVI7v4hHTqGKPcojNoNEFjoFVy
+        oss:
+          endpoint: oss-cn-beijing.aliyuncs.com
+          bucket-name: douyin-simple1
+  application:
+    name: douyin-basic
+  redis:
+    host: www.captainx.fun
+    port: 6379
+  cache:
+    type: redis
+    redis:
+      # 缓存空值，解决缓存穿透问题
+      cache-null-values: true
+      use-key-prefix: true
+      # 设置缓存过期时间
+      time-to-live: 3600000
+
+#mybatis-plus:
+#  mapper-locations: classpath*:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type:
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 10010
+
+
+## 视频配置
+video-config:
+  ##视频保存路径
+  video-save-path: videos #your target folder name
+  ##视频封面保存路径
+  video-cover-save-path: covers #your target folder name
+  ##feed流至多返回多少条视频
+  feed-video-max-num: 15
